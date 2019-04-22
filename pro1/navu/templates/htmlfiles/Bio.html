@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<head>
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<title>About Form
+</title>
+<style>
+    form{
+     padding:20px;
+	 margin:30px 30px 30px 30px;
+	 font-size:25px;
+	 color:black;	
+	 background:white;
+	 align:center;
+     max-width: 590px;
+     margin: 100px auto;
+	 background: -linear-gradient(bottom, rgba(240,230,140,1), rgba(240,230,140,.4));
+     background: -webkit-linear-gradient(bottom, rgba(240,230,140,1), rgba(240,230,140,0.4));
+     background: -moz-linear-gradient(bottom, rgba(240,230,140,1), rgba(240,230,140,.4));
+	 transition: height .5s;
+     -webkit-transition: height .5s;
+     -moz-transition: height .5s;
+	}
+	select
+	{
+	 height:40px;
+	 width:220px;
+	 float:left;
+	 font-size:20px;
+	 color:black;
+	}
+	h1{
+	  font-family: 'Fjalla One', sans-serif;
+	 font-size:50px;
+	 text-align:center;
+	}
+	label{
+	width:200px;
+	float:left;
+	font-size:27px;
+	color:black;
+	}
+	body{
+	 background:url(univ.jpg);
+	 background-attachment:fixed;
+      background-color:rgba(0,0,0,1);
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+	  margin:0 auto;
+	  
+	}
+	input 
+    {
+     border: 1px solid;
+	  padding: 10px 10px 10px 10px;
+      font-size: 18px;
+	  font-weight:50px;
+	  width:200px;
+    }	
+	input[type="submit"] 
+	{
+	 width:100px;
+      color:white;
+	 background:#0D0106;
+	 width: 120px;
+    height: 40px;
+    }
+	.topnav{
+	 overflow:hidden;
+	 background-color:black;
+	 position: fixed;
+	 z-index:1;
+	 top:0;
+	 width:100%;
+	}
+	.topnav a{
+     float:center;
+     color:white;
+	 text-align:center;
+	 padding:14px 16px;
+	 font-size:25px;
+	 text-decoration:none;
+	}
+	.topnav a:hover{
+	 background-color:rgba(127,255,0,1);
+	 color:black;
+	}
+	.topnav active{
+	}
+	@media (max-width: 500px) {
+  form
+    {
+     font-size: 50px;
+     margin-top: 20px;
+     line-height: 40px;
+    } 
+	}
+	
+</style>
+</head>
+<body>
+<center>
+<div class="topnav">
+  <a href="E:\html\about.html">About us</a>
+  <a href="E:\html\rate.html">Rate us</a>
+  <a href="E:\html\courses.html">Courses</a>
+  <a href="E:\html\university.html">University</a>
+  <a href="E:\html\registration.html">Regstration Form</a>
+  <a href="E:\html\login.html">Login </a>
+  </div>
+</center>
+
+
+
+
+<form method="post" >
+<h1>About Student</h1>
+
+
+    {%csrf_token%}
+    <div>
+ <label for="INTREST">INTEREST:</label>
+   <input type="text" placeholder="name" name="INTREST" id="INTREST" required value={{ INTREST }}>
+    <br><br>
+        </div>
+    <div>
+   <label for="Hobbies">HOBBIES:</label>
+  <input type="text" placeholder="Hobbies" name="Hobbies" id="Hobbies" required value={{ Hobbies }}><br><br>
+        </div>
+    <div>
+  <label for="Bio">BIO:</label>
+  <textarea rows="4" cols="50" placeholder="About youself" name="Bio" id="Bio" required value{{ Bio }}>
+</textarea><br><br>
+        </div>
+<input type="submit" value="Submit">
+    <button onclick="call">Cancle</button>
+</form>
+<script>
+    function call(){
+    window.location.href="/Registration.html" }
+</script>
+</body>
+</html>

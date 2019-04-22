@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+</head>
+<body>
+<form method="POST">
+        {% csrf_token %}
+<div><label for= "name">Name:</label>
+  <input type="text" placeholder="name" name="name" id="name" required value={{ name }}><br><br>
+</div><div>
+ <label for="username"> username:</label>
+  <input type="text" placeholder="username" name="username" id="username" required value={{ username }}><br><br>
+</div><div>
+  <label for="email">Email:</label>
+  <input type="text" placeholder="Email" name="email" id="email" required value={{ email }}><br><br>
+</div><div>
+  <label for="password">Password:</label>
+  <input type="password" placeholder="password"  name="password" id="password" required value={{ password }}><br><br>
+</div>
+    <input type="submit" value="Sign Up">
+</form>
+</body>
+</html>

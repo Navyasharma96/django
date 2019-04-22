@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<head>
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+<title>Login Page
+</title>
+<style>
+  form{
+     padding:140px;
+	font-size:25px;
+	color:black;
+	 align:left;
+      background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+     background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,0.4));
+     background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+	 transition: height .5s;
+     -webkit-transition: height .5s;
+     -moz-transition: height .5s;
+     margin: 170px auto;
+     
+	}
+	
+	label{
+	 width:200px;
+     float:left;
+	 font-size:30px;
+	 color:black;
+	}
+	
+	button{
+	 height:50px;
+	 width: 208px;
+     color: white;
+     font-size:27px;
+     background-color:seagreen;
+	}
+	
+	input 
+    {
+     border: 1px solid;
+	 padding: 10px 10px 10px 10px;
+      font-size: 18px;
+	  font-weight:50px;
+	  width:200px;
+    }
+	
+	body{
+	 background:url(https://i.postimg.cc/Gt9ctH9v/computer-desk-electronics-238118.jpg);
+	 background-attachment:fixed;
+      background-color:rgba(0,0,0,1);
+      background-size:cover;
+      background-position:contain;
+      background-repeat:no-repeat;
+	  margin:0 auto;
+	 
+	}
+	
+	.topnav{
+	 overflow:hidden;
+	 background-color:black;
+	 position: fixed;
+	 z-index:1;
+	 top:0;
+	 width:100%;
+	}
+	
+	.topnav a{
+     float:center;
+     color:white;
+	 text-align:center;
+	 padding:14px 16px;
+	 font-size:25px;
+	 text-decoration:none;
+	}
+	
+	.topnav a:hover{
+	 background-color:rgba(127,255,0,1);
+	 color:black;
+	}
+	.topnav active{
+	}
+	
+	@media (max-width: 500px) {
+     form
+        {
+         font-size: 50px;
+          margin-top: 20px;
+         line-height: 40px;
+        } 
+
+	  body{
+	    
+		}
+	}
+</style>
+</head>
+<body>
+<center>
+<div class="topnav">
+<div class="active">
+  <a href="E:\html\about.html">About us</a>
+  <a href="E:\html\rate.html">Rate us</a>
+  <a href="E:\html\courses.html">Courses</a>
+  <a href="E:\html\university.html">University</a>
+  <a href="E:\html\registration.html">Regstration Form</a>
+  <a href="E:\html\login.html">Login </a>
+  </div>
+  </div>
+  </center>
+  <br><br>
+<form  method="post">
+  {% csrf_token %}
+<label>Email:</label>
+  <input type="text" placeholder="abc@gmail.com" required><br><br>
+  <label>Password:</label>
+  <input type="password" placeholder="password" required><br><br>
+  <button>LogIn</button>
+  <button onclick="call">Cancel</button>
+  <script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+function call(){
+  window.location.href="/eduactionandcarrer.html"}
+</script>
+</form>
+</body>
+<html>
